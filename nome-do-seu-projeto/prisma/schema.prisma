@@ -1,0 +1,10 @@
+// schema.prisma
+
+// Definição do modelo de Usuário
+model User {
+  id        Int      @id @default(autoincrement())
+  name      String
+  email     String   @unique
+  createdAt DateTime @default(now()) // Adicione um campo de data de criação, se desejar
+  updatedAt DateTime @updatedAt      // Adicione um campo de data de atualização, se desejar
+}
